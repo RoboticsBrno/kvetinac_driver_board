@@ -1,0 +1,22 @@
+<language cs>
+DESCRIPTION - Kvetinac_driver_board:
+
+Deska pouzita v robotech: Yunibeer, Quora, Chessbot atd.
+
+- vhodně navrhnout napájení
+- uchyceni desky - snažit se umístit otvory pro připevnění v 1 cm rastru (kvůli Merkuru)
+- napájení desky - kabel se připájí na desku a na druhou stranu MP-JET
+- snížení vyzařování - po dokončení návrhu udělat prokovy kolem hran desky
+- SPI - vyvést komunikační zběrnici SPI + napajeni + select piny
+- I2C - vyvést I2c linku + napajeni + select piny
+- serva ? (oddělení napájení; 4 x komplet a 4 x PWM + zem)
+- při 18um vrstvě mědi bude třeb posílit hlavní napájecí cesty měděným drátem - nepokovovat hlavní napájecí dráhy
+
+Otázky:
+- rezistory a kondenzátory v 0603 - ano či ne
+- prokovy přímo pod součástkama - připadně prokov mezi dvěma součástkama
+- univarzálnost desky - jak moc? 
+- serva - jsou potřeba? jakým stylem?
+
+
+</language cs>
