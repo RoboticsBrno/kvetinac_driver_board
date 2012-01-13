@@ -3,21 +3,24 @@ DESCRIPTION - Kvetinac_driver_board:
 
 Deska pouzita v robotech: Yunibeer, Quora, Chessbot atd.
 
-- vhodně navrhnout napájení
-- uchyceni desky - snažit se umístit otvory pro připevnění v 1 cm rastru (kvůli Merkuru)
-- napájení desky - kabel se připájí na desku a na druhou stranu MP-JET
-- snížení vyzařování - po dokončení návrhu udělat prokovy kolem hran desky
-- SPI - vyvést komunikační zběrnici SPI + napajeni + select piny
-- I2C - vyvést I2c linku + napajeni + select piny
-- serva ? (oddělení napájení; 4 x komplet a 4 x PWM + zem)
-- při 18um vrstvě mědi bude třeb posílit hlavní napájecí cesty měděným drátem - nepokovovat hlavní napájecí dráhy
+Rozdíly oproti starší verzy:
+- vhodněji navrhnoto napájení
+- doděláno uchyceni desky - umístěny v 1 cm rastru (kvůli Merkuru)
+- napájení desky - napájecí kabely se pájí každý z jedný strany desky naproti sobě s tím že jsou osazeny konektory MP-JET
+- sníženo vyzařování - udělány prokovy kolem hran desky
+- SPI - vyvedeny 3 páry komunikačních zběrnic SPI s napajeni a select piny
+- I2C - odebráný 3 páry, vyveden jen jeden pár s přípravou pro další zařízení
+- při osazování je třeba na napájecí dráhy přidat zesílení z měděného plýšku
 
 Otázky:
-- rezistory a kondenzátory v 0603 - ano či ne
-- prokovy přímo pod součástkama - připadně prokov mezi dvěma součástkama
 - univarzálnost desky - jak moc?
 - serva - jsou potřeba? jakým stylem?
-- standardizace SPI konektoru
+
+Upravit:
+- předělat ledky na stranu konektorů (otočit)
+- nesel by na P_SPI0 vytahout pin SS z procesoru (misto GND na pozici slaveselect)
+- na ADC by bylo dobre mit jen analogove drahy (ted je tam jeste IN_RB)
+- přemýstit kondenzátory na napájení
 
 
 </language cs>
