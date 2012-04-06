@@ -1,26 +1,22 @@
 <language cs>
 DESCRIPTION - Kvetinac_driver_board:
 
-Deska pouzita v robotech: Yunibeer, Quora, Chessbot atd.
+Verze 0(v.0): pouzita v robotech - Yunibeer, Quora, Chessbot atd.
 
-Rozdíly oproti starší verzy:
-- vhodněji navrhnoto napájení
-- doděláno uchyceni desky - umístěny v 1 cm rastru (kvůli Merkuru)
-- napájení desky - napájecí kabely se pájí každý z jedný strany desky naproti sobě s tím že jsou osazeny konektory MP-JET
-- sníženo vyzařování - udělány prokovy kolem hran desky
-- SPI - vyvedeny 3 páry komunikačních zběrnic SPI s napajeni a select piny
-- I2C - odebráný 3 páry, vyveden jen jeden pár s přípravou pro další zařízení
-- při osazování je třeba na napájecí dráhy přidat zesílení z měděného plýšku
+Verze 1(v.1): pouzita v robotech - BearBot, The Falcons
 
-Otázky:
-- univarzálnost desky - jak moc?
-- serva - jsou potřeba? jakým stylem?
+Rozdíly oproti starší verzy(v.0 vs v.1):
+- vhodněji navrhnoto napájení - dle pravidel elektronických návrhů
+- zmenšení celé desky
+- použity menší součástky (1206 a 0805 nahrazeny 0603)
+- přidány uchytávací otvory
 
-Upravit:
-- předělat ledky na stranu konektorů (otočit)
-- nesel by na P_SPI0 vytahout pin SS z procesoru (misto GND na pozici slaveselect)
-- na ADC by bylo dobre mit jen analogove drahy (ted je tam jeste IN_RB)
-- přemýstit kondenzátory na napájení
-
+Instrukce pro výrobu
+- napájení desky - napájecí kabely se pájí každý z jedný strany desky (dvě pajecí plošky ve středu desky u spodní hrany) naproti sobě s tím, že kabely jsou osazeny konektory MP-JET o průměru 3,5 mm
+- při osazování je třeba na napájecí dráhy přidat zesílení z měděného plýšku (pri DPS o tlousce medi 35 um)
+- vsechny soucastky (ne typu SMD) jsou umisteny ze strany botton (ze strany top má být umisten chladic)
+- musí se připájet čtyři drátové propojky (jsou znázorněny šedou barvou) - z důvodu zjednodušení desky
+- v případě používání serv je třeba připojit napájení (konektor pro serva nemá napájení) - napájení lze použít 5V ze zdroje nebo při použití externího stabilizátoru z baterek
+- nepoužívat 5V stabilizator pro napájení serv!!!
 
 </language cs>
