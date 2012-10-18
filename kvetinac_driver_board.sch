@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.2">
+<eagle version="6.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -19491,7 +19491,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="R33" library="rcl" deviceset="R-EU_" device="R0603" value="220"/>
 <part name="R34" library="rcl" deviceset="R-EU_" device="R0603" value="4k7"/>
 <part name="R35" library="rcl" deviceset="R-EU_" device="R0603" value="4k7"/>
-<part name="LED_GREEN" library="led" deviceset="LED" device="CHIPLED_0805"/>
+<part name="LED" library="led" deviceset="LED" device="CHIPLED_0805" value="GREEN"/>
 <part name="R36" library="rcl" deviceset="R-EU_" device="R0603" value="1k"/>
 <part name="FERITE_BEAD" library="rcl" deviceset="R-EU_" device="R0603" value="10uH"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
@@ -19514,10 +19514,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="STOP_BUTTON" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="R47" library="rcl" deviceset="R-EU_" device="R0603" value="220"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
-<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805"/>
-<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805"/>
-<part name="LED3" library="led" deviceset="LED" device="CHIPLED_0805"/>
-<part name="LED4" library="led" deviceset="LED" device="CHIPLED_0805"/>
+<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
+<part name="LED2" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
+<part name="LED3" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
+<part name="LED4" library="led" deviceset="LED" device="CHIPLED_0805" value="RED"/>
 <part name="IC3" library="74" deviceset="74*238" device="D" technology="HC"/>
 <part name="R49" library="rcl" deviceset="R-EU_" device="R0603" value="470R"/>
 <part name="R50" library="rcl" deviceset="R-EU_" device="R0603" value="470R"/>
@@ -19578,9 +19578,9 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="R69" library="rcl" deviceset="R-EU_" device="R0603" value="220"/>
 <part name="R70" library="rcl" deviceset="R-EU_" device="R0603" value="220"/>
 <part name="GND27" library="supply1" deviceset="GND" device=""/>
-<part name="C17" library="rcl" deviceset="C-EU" device="C0805" value="4.7uF/6,3V"/>
-<part name="C18" library="rcl" deviceset="C-EU" device="C0805" value="4.7uF/6,3V"/>
-<part name="C20" library="rcl" deviceset="C-EU" device="C0805" value="4.7uF/6,3V"/>
+<part name="C17" library="rcl" deviceset="C-EU" device="C0805" value="4,7uF/6,3V"/>
+<part name="C18" library="rcl" deviceset="C-EU" device="C0805" value="4,7uF/6,3V"/>
+<part name="C20" library="rcl" deviceset="C-EU" device="C0805" value="4,7uF/6,3V"/>
 <part name="IC4" library="vacha" deviceset="VNH2SP30" device=""/>
 <part name="IC5" library="vacha" deviceset="VNH2SP30" device=""/>
 <part name="GND29" library="supply1" deviceset="GND" device=""/>
@@ -19693,7 +19693,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="R33" gate="G$1" x="180.34" y="5.08"/>
 <instance part="R34" gate="G$1" x="185.42" y="-73.66" rot="R270"/>
 <instance part="R35" gate="G$1" x="177.8" y="-73.66" rot="R270"/>
-<instance part="LED_GREEN" gate="G$1" x="152.4" y="63.5"/>
+<instance part="LED" gate="G$1" x="152.4" y="63.5"/>
 <instance part="R36" gate="G$1" x="152.4" y="76.2" rot="R270"/>
 <instance part="FERITE_BEAD" gate="G$1" x="17.78" y="-76.2"/>
 <instance part="GND7" gate="1" x="152.4" y="50.8"/>
@@ -20074,7 +20074,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <segment>
 <wire x1="152.4" y1="53.34" x2="152.4" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-<pinref part="LED_GREEN" gate="G$1" pin="C"/>
+<pinref part="LED" gate="G$1" pin="C"/>
 </segment>
 <segment>
 <wire x1="208.28" y1="-25.4" x2="208.28" y2="-27.94" width="0.1524" layer="91"/>
@@ -20920,7 +20920,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <segment>
 <wire x1="152.4" y1="71.12" x2="152.4" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="R36" gate="G$1" pin="2"/>
-<pinref part="LED_GREEN" gate="G$1" pin="A"/>
+<pinref part="LED" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="STOP" class="0">
