@@ -1,5 +1,8 @@
-<language cs>
-DESCRIPTION - Kvetinac_driver_board:
+<language cs>DESCRIPTION - Kvetinac_driver_board:
+
+
+POVINNĚ PŘEČÍST!!!
+
 
 Verze 0(v.0): pouzita v robotech - Yunibeer, Quora, Chessbot atd.
 
@@ -7,16 +10,23 @@ Verze 1(v.1): pouzita v robotech - BearBot, The Falcons
 
 Rozdíly oproti starší verzy(v.0 vs v.1):
 - vhodněji navrhnoto napájení - dle pravidel elektronických návrhů
+- přidáná ochrana proti přepólování
 - zmenšení celé desky
 - použity menší součástky (1206 a 0805 nahrazeny 0603)
 - přidány uchytávací otvory
 
-Instrukce pro výrobu
-- napájení desky - napájecí kabely se pájí každý z jedný strany desky (dvě pajecí plošky ve středu desky u spodní hrany) naproti sobě s tím, že kabely jsou osazeny konektory MP-JET o průměru 3,5 mm
-- při osazování je třeba na napájecí dráhy přidat zesílení z měděného plýšku (pri DPS o tlousce medi 35 um)
-- vsechny soucastky (ne typu SMD) jsou umisteny ze strany botton (ze strany top má být umisten chladic)
-- musí se připájet čtyři drátové propojky (jsou znázorněny šedou barvou) - z důvodu zjednodušení desky
-- v případě používání serv je třeba připojit napájení (konektor pro serva nemá napájení) - napájení lze použít 5V ze zdroje nebo při použití externího stabilizátoru z baterek
-- nepoužívat 5V stabilizator pro napájení serv!!!
+Instrukce pro výrobu a používání:
+- vsechny vývodové soucastky (hlavně kondenzátory, cívky a odpory - ne typu SMD!!!) jsou umisteny ze strany botton (strana kde není umístěn hlavní číp ATmega128 ani drivery VNH2SP30), na strany top by měl být chladič pro drivery a případně volná plocha pro uchycení desky k robotovi či jiným zařízením
+- napájení desky - napájecí kabely se pájí každý z jedný strany desky (dvě pajecí plošky ve středu desky u spodní hrany) naproti sobě s tím, že kabely by měli být osazeny konektory MP-JET o průměru 3,5 mm (speciální modelářské konektory - konstruované proti přepolování a na vyšší proudy)
+- na vývodové plošky z driveru VNH2SP30 (OUTA_1, OUTA_2, OUTB_1, OUTB_2), na které se mají připojit motory, je třeba připájet kovové dutinky z čokolád (čokoláda - šroubovací spojka na kabely)
+- musí se připájet čtyři drátové propojky (jsou znázorněny šedou barvou - vrstva tDocu) - z důvodu zjednodušení desky
+- v případě používání serv je třeba připojit/přivést externě pro serva napájení (konektor pro serva nemá přivedeno napájení - bez napájení serva nebudou fungovat) - napájení lze použít buď 5V z počítačového zdroje nebo při použití externího stabilizátoru z baterek  (nepoužívat 5V stabilizator pro napájení serv!!!)
 
-</language cs>
+PRVNÍ OŽIVENÍ DESKY:
+První oživení desky provádějte vždy raději s někým zkušenějším, vyvarujete se případnému zničení a následnému zklámaní z neúspěchu.
+Desku nejprve napájejte nejlépe ze zdroje s regulovatelným proudovým odběrem (pokud jej nemáte, měřte alespoň proud mezi baterijemi a deskou, měl by být max do 100 mA).
+Po připojení napájení by se měla rozstvítit zelená ledka, pokud ano zkuste všechny součástky, jestli se náhodou nepřehřívaji (45 °C a více je problém), pokud se Vám led nerozsvítí, ihned odpojte zdroj a obraťte se na někoho zkušenějšího.
+
+ATmega128 se PROGRAMUJE přes piny PE0(RXD/PDI) a PE1(TXD/PDO). NE jako OSTATNÍ čipy (ATmega16, ATmega168 atd.) přes piny MISO, MOSI!!!!
+
+Pozn. při osazování by bylo vhodné na napájecí dráhy přidat zesílení z měděného plýšku (u DPS s tlouškou mědi 35 um a méně)</language cs>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -19399,6 +19399,20 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="-2.54" y1="-1.27" x2="-2.54" y2="1.27" width="0.127" layer="21"/>
 <smd name="P$1" x="0" y="0" dx="6.35" dy="3.81" layer="1" thermals="no"/>
 </package>
+<package name="CABEL_SMD_12*6MM">
+<wire x1="-3.175" y1="0.635" x2="3.175" y2="0.635" width="0.127" layer="21"/>
+<wire x1="3.175" y1="0.635" x2="3.175" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="3.175" y1="-0.635" x2="-3.175" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="-0.635" x2="-3.175" y2="0.635" width="0.127" layer="21"/>
+<smd name="P$1" x="0" y="0" dx="12" dy="6" layer="1" thermals="no"/>
+</package>
+<package name="CABEL_SMD_6.5*6MM">
+<wire x1="-1.905" y1="0.635" x2="1.905" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.905" y1="0.635" x2="1.905" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="1.905" y1="-0.635" x2="-1.905" y2="-0.635" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="-0.635" x2="-1.905" y2="0.635" width="0.127" layer="21"/>
+<smd name="P$1" x="0" y="0" dx="6.5" dy="6" layer="1" thermals="no"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CABEL_SMD">
@@ -19410,7 +19424,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="CABEL_SMD">
+<deviceset name="CABEL_SMD" prefix="CABEL_SMD_12*6MM">
 <gates>
 <gate name="G$1" symbol="CABEL_SMD" x="0" y="0"/>
 </gates>
@@ -19424,6 +19438,22 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </technologies>
 </device>
 <device name="0.25*0.15" package="CABEL_SMD_0.25*0.15">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="CABEL_SMD_12*6MM" package="CABEL_SMD_12*6MM">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="CABEL_SMD_6.5*6MM" package="CABEL_SMD_6.5*6MM">
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 </connects>
@@ -19624,10 +19654,10 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="VCC" library="cabel_smd" deviceset="CABEL_SMD" device=""/>
 <part name="0V" library="cabel_smd" deviceset="CABEL_SMD" device=""/>
-<part name="OUTB_2" library="cabel_smd" deviceset="CABEL_SMD" device=""/>
-<part name="OUTA_2" library="cabel_smd" deviceset="CABEL_SMD" device=""/>
-<part name="OUTA_1" library="cabel_smd" deviceset="CABEL_SMD" device=""/>
-<part name="OUTB_1" library="cabel_smd" deviceset="CABEL_SMD" device=""/>
+<part name="OUTB_2" library="cabel_smd" deviceset="CABEL_SMD" device="CABEL_SMD_6.5*6MM" value="CABEL_SMDCABEL_SMD_6.5*6MM"/>
+<part name="OUTA_2" library="cabel_smd" deviceset="CABEL_SMD" device="CABEL_SMD_6.5*6MM" value="CABEL_SMDCABEL_SMD_6.5*6MM"/>
+<part name="OUTA_1" library="cabel_smd" deviceset="CABEL_SMD" device="CABEL_SMD_6.5*6MM" value="CABEL_SMDCABEL_SMD_6.5*6MM"/>
+<part name="OUTB_1" library="cabel_smd" deviceset="CABEL_SMD" device="CABEL_SMD_6.5*6MM" value="CABEL_SMDCABEL_SMD_6.5*6MM"/>
 <part name="PG2_CON" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="R72" library="rcl" deviceset="R-EU_" device="R0603" value="220"/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
@@ -19641,6 +19671,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="Q3" library="vacha" deviceset="TPCA8128" device="SO8"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
 <part name="C23" library="rcl_upravena" deviceset="C-EU" device="C0306" value="100nF/6,3V"/>
+<part name="VCCB" library="cabel_smd" deviceset="CABEL_SMD" device="CABEL_SMD_12*6MM"/>
+<part name="VCCA" library="cabel_smd" deviceset="CABEL_SMD" device="CABEL_SMD_12*6MM"/>
 </parts>
 <sheets>
 <sheet>
@@ -19844,6 +19876,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="Q3" gate="G$1" x="109.22" y="91.44" rot="R180"/>
 <instance part="GND5" gate="1" x="93.98" y="83.82"/>
 <instance part="C23" gate="G$1" x="58.42" y="-78.74"/>
+<instance part="VCCB" gate="G$1" x="68.58" y="78.74" rot="R180"/>
+<instance part="VCCA" gate="G$1" x="71.12" y="20.32" rot="R180"/>
 </instances>
 <busses>
 <bus name="MOTOR_BUS:IN_LA,IN_LB,IN_RA,IN_RB,DIAG_LA,DIAG_LB,DIAG_RA,DIAG_RB,CS_L,CS_R,PWM_L,PWM_R,BAT">
@@ -21943,6 +21977,11 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="IC5" gate="G$1" pin="VCC@1"/>
 <pinref part="IC5" gate="G$1" pin="VCC"/>
 <pinref part="IC5" gate="G$1" pin="VCC@2"/>
+<pinref part="VCCB" gate="G$1" pin="P$1"/>
+<wire x1="73.66" y1="78.74" x2="83.82" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="VCCA" gate="G$1" pin="P$1"/>
+<wire x1="76.2" y1="20.32" x2="83.82" y2="20.32" width="0.1524" layer="91"/>
+<junction x="83.82" y="20.32"/>
 </segment>
 </net>
 <net name="N$18" class="0">
