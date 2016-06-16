@@ -6,7 +6,10 @@ POVINNĚ PŘEČÍST!!!
 
 Verze 0(v.0): pouzita v robotech - Yunibeer, Quora, Chessbot atd.
 
-Verze 1(v.1): pouzita v robotech - BearBot, The Falcons
+Verze 1(v.1): pouzita v robotech - BearBot, Azrael
+misto AREF na VCC je přes kondenzátor připojen na zem (GND)
+
+Verze 3(v.3): pouzita v robotech - Enkeli, Aranka
 
 Rozdíly oproti starší verzy(v.0 vs v.1):
 - vhodněji navrhnoto napájení - dle pravidel elektronických návrhů
@@ -14,6 +17,10 @@ Rozdíly oproti starší verzy(v.0 vs v.1):
 - zmenšení celé desky
 - použity menší součástky (1206 a 0805 nahrazeny 0603)
 - přidány uchytávací otvory
+
+Rozdíly oproti starší verzy(v.1 vs v.3):
+- přehozeny piny na portu F (ADCx)
+- vyvedeno napájení pro serva
 
 Instrukce pro výrobu a používání:
 - vsechny vývodové soucastky (hlavně kondenzátory, cívky a odpory - ne typu SMD!!!) jsou umisteny ze strany botton (strana kde není umístěn hlavní číp ATmega128 ani drivery VNH2SP30), na strany top by měl být chladič pro drivery a případně volná plocha pro uchycení desky k robotovi či jiným zařízením
